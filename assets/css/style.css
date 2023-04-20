@@ -1,7 +1,12 @@
 :root {
     --whiteColor: #fff;
-    --principalFont: 'Red Hat Text', sans-serif;
     --bgColor: #1e1e2a;
+    --bgColorCountdown: #1a1a23;
+    --countdownColor1: #2c2c44;
+    --countdownColor2: #34364f;
+    --fontColorDays: #8885a0;
+    --fontColorCountdown: #f85e86;
+    --principalFont: 'Red Hat Text', sans-serif;
 }
 
 body {
@@ -31,11 +36,10 @@ footer {
 }
 
 footer img {
-    margin: 0 2em 3em;
+    margin: 5em 2em 3em;
 }
 
 footer img:hover {
-    fill: #000;
     cursor: pointer;
 }
 
@@ -50,17 +54,66 @@ h1 {
 
 .conatiner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: 10em;
-    width: 50em;
-    background-color: var(--whiteColor);
+    height: 13em;
+    width: 42em;
+    margin: 1em;
 }
 
-.item {
+.time-box {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    height: 8em;
-    width: 8em;
-    background-color: blue;
+    align-items: center;
+    height: 13em;
+    width: 10em;
+    margin: 0.5em 1em;
 }
+
+.time-box h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 1.5em 0 0 0;
+    color: var(--fontColorDays);
+}
+
+.time-box-countdown {
+    height: 11em;
+    width: 10em;
+    border-radius: 5px;
+    background-color: var(--countdownColor2);
+    box-shadow: 0px 10px 0px 0px var(--bgColorCountdown);
+}
+
+.time-box-countdown div {
+
+    height: 5.5em;
+    width: 10em;
+    border-radius: 5px;
+    background-color: var(--countdownColor1);
+}
+
+.time-box-countdown div::after {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 8px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 5em;
+    background-color: var(--bgColorCountdown);
+}
+
+.time-box-countdown div::before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 9px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: 9.41em;
+    margin-top: 5em;
+    background-color: var(--bgColorCountdown);
+}
+
