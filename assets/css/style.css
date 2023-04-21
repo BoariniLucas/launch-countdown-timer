@@ -35,12 +35,13 @@ footer {
     background-image: url(../images/pattern-hills.svg);
 }
 
-footer img {
+a {
     margin: 5em 2em 3em;
 }
 
-footer img:hover {
+footer a svg:hover path {
     cursor: pointer;
+    fill: var(--fontColorCountdown);
 }
 
 h1 {
@@ -50,6 +51,21 @@ h1 {
     letter-spacing: 5px;
     margin-top: 5em;
     color: var(--whiteColor);
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 1.5em 0 0 0;
+    color: var(--fontColorDays);
+}
+
+h3 {
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    color: var(--fontColorCountdown);
+    
 }
 
 .conatiner {
@@ -71,14 +87,10 @@ h1 {
     margin: 0.5em 1em;
 }
 
-.time-box h2 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 1.5em 0 0 0;
-    color: var(--fontColorDays);
-}
-
 .time-box-countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 11em;
     width: 10em;
     border-radius: 5px;
@@ -87,11 +99,13 @@ h1 {
 }
 
 .time-box-countdown div {
-
-    height: 5.5em;
+    position: absolute;
+    height: 5.3em;
     width: 10em;
     border-radius: 5px;
+    margin-top: -5.2em;
     background-color: var(--countdownColor1);
+    opacity: 0.7;
 }
 
 .time-box-countdown div::after {
@@ -101,7 +115,7 @@ h1 {
     width: 8px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    margin-top: 5em;
+    margin-top: 4.7em;
     background-color: var(--bgColorCountdown);
 }
 
@@ -109,11 +123,11 @@ h1 {
     content: '';
     position: absolute;
     height: 15px;
-    width: 9px;
+    width: 0.6em;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     margin-left: 9.41em;
-    margin-top: 5em;
+    margin-top: 4.7em;
     background-color: var(--bgColorCountdown);
 }
 
