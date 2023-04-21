@@ -6,6 +6,7 @@
     --countdownColor2: #34364f;
     --fontColorDays: #8885a0;
     --fontColorCountdown: #f85e86;
+    --socialMidiaIconColor: #8385A9;
     --principalFont: 'Red Hat Text', sans-serif;
 }
 
@@ -15,23 +16,20 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     font-size: 14px;
     font-family: var(--principalFont);
     background-color: var(--bgColor);
     background-image: url(../images/bg-stars.svg);
 }
 
-body footer {
-    align-items: end;
-}
-
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 197px;
-    width: 100%;
+    width: 100vw;
     background-image: url(../images/pattern-hills.svg);
 }
 
@@ -131,3 +129,24 @@ h3 {
     background-color: var(--bgColorCountdown);
 }
 
+.social-midia {
+    display: flex;
+
+}
+
+.attribution {
+    align-items: end;
+    
+}
+
+.attribution a {
+    text-decoration: none;
+    margin: 0;
+    color: var(--socialMidiaIconColor);
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+    color: var(--fontColorCountdown);
+    cursor: pointer;
+}
