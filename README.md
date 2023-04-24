@@ -23,8 +23,8 @@ Nesse projeto fiz realizando as seguinte etapas:
 - [X] Montar estrutura básica do timer;
 - [X] Estilizar design do timer;
 - [X] Acertar links do footer;
-- [x] Implementar função para contagem regressiva;
-- [ ] Realizar estilização de flip no painel;
+- [x] Implementar função para contagem regressiva; 
+- [X] Realizar estilização de flip no painel;
 - [ ] Implementar tela para escolher data;
 
 ### Screenshot
