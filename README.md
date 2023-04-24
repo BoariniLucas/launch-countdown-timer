@@ -40,5 +40,5 @@ As tecnologias utilizadas para esse projeto são as listadas abaixo:
 
 ### Contatos
 
-![LinkedIn](www.linkedin.com/in/lucas-boarini)
+[LinkedIn](www.linkedin.com/in/lucas-boarini)
 
