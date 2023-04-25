@@ -17,7 +17,7 @@ const btnClearForm = document.querySelector('#btn-clear-form');
 const btnSelectDate = document.querySelector('#btn-select-date');
 
 let countDownDate = new Date("Jun 29, 2023 20:35:00").getTime();
-let selectData = 0;
+let selectData = countDownDate;
 let days = '';
 let hours = '';
 let minutes = '';
@@ -63,67 +63,89 @@ btnSelectDate.addEventListener('click', () => {
 
 /*     ----Functions----     */
 /*         ---------         */
+function countDownFunction() {
+  let interval = setInterval(function() {
+
+    let distance;
+
+    if (selectData == "" || selectData == 0) {
+
+      alert("EMPTY DATE");
+      clearForm();
+      clearInterval(interval);
+      launchDateForm.style.visibility = "hidden";
+
+      clearDisplay();          
+
+    } else {
+
+      let now = new Date().getTime();
+    
+      distance = countDownDate - now;
+    
+      let daysCont = Math.floor(distance / (1000 * 60 * 60 * 24));
+      let hoursCont = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutesCont = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      let secondsCont = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      if(days != daysCont) {
+        daysDisplay.innerHTML = daysCont;
+        days = daysCont;
+    
+        daysBoxFlip.classList.toggle("flip");
+        hoursBoxFlip.classList.toggle("ok");
+        minutesBoxFlip.classList.toggle("ok");
+        secondsBoxFlip.classList.toggle("ok");
+      } 
+    
+      if(hours != hoursCont) {
+        hoursDisplay.innerHTML = hoursCont;
+        hours = hoursCont;
+    
+        daysBoxFlip.classList.toggle("ok");
+        hoursBoxFlip.classList.toggle("flip");
+        minutesBoxFlip.classList.toggle("ok");
+        secondsBoxFlip.classList.toggle("ok");
+      } 
+      
+      if(minutes != minutesCont) {
+        minutesDisplay.innerHTML = minutesCont;
+        minutes = minutesCont;
+    
+        daysBoxFlip.classList.toggle("ok");
+        hoursBoxFlip.classList.toggle("ok");
+        minutesBoxFlip.classList.toggle("flip");
+        secondsBoxFlip.classList.toggle("ok");
+      } 
+      
+      if(seconds != secondsCont) {
+        secondsDisplay.innerHTML = secondsCont;
+        seconds = secondsCont;
+        
+        daysBoxFlip.classList.toggle("ok");
+        hoursBoxFlip.classList.toggle("ok");
+        minutesBoxFlip.classList.toggle("ok");
+        secondsBoxFlip.classList.toggle("flip");
+      }
+    }   
+    
+    if (distance < 0) {
+        clearInterval(interval);
+
+        clearDisplay();
+    
+        alert("TIME EXPIRED");
+      }
+  }, 1000);
+}
 
 function clearForm() {
   dateTime.value = "";
 }
 
-function countDownFunction() {
-  let interval = setInterval(function() {
-
-    let now = new Date().getTime();
-  
-    let distance = countDownDate - now;
-  
-    let daysCont = Math.floor(distance / (1000 * 60 * 60 * 24));
-    let hoursCont = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutesCont = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let secondsCont = Math.floor((distance % (1000 * 60)) / 1000);
-  
-    if(days != daysCont) {
-      daysDisplay.innerHTML = daysCont;
-      days = daysCont;
-  
-      daysBoxFlip.classList.toggle("flip");
-      hoursBoxFlip.classList.toggle("ok");
-      minutesBoxFlip.classList.toggle("ok");
-      secondsBoxFlip.classList.toggle("ok");
-    } 
-  
-    if(hours != hoursCont) {
-      hoursDisplay.innerHTML = hoursCont;
-      hours = hoursCont;
-  
-      daysBoxFlip.classList.toggle("ok");
-      hoursBoxFlip.classList.toggle("flip");
-      minutesBoxFlip.classList.toggle("ok");
-      secondsBoxFlip.classList.toggle("ok");
-    } 
-    
-    if(minutes != minutesCont) {
-      minutesDisplay.innerHTML = minutesCont;
-      minutes = minutesCont;
-  
-      daysBoxFlip.classList.toggle("ok");
-      hoursBoxFlip.classList.toggle("ok");
-      minutesBoxFlip.classList.toggle("flip");
-      secondsBoxFlip.classList.toggle("ok");
-    } 
-    
-    if(seconds != secondsCont) {
-      secondsDisplay.innerHTML = secondsCont;
-      seconds = secondsCont;
-      
-      daysBoxFlip.classList.toggle("ok");
-      hoursBoxFlip.classList.toggle("ok");
-      minutesBoxFlip.classList.toggle("ok");
-      secondsBoxFlip.classList.toggle("flip");
-    }
-  
-    if (distance < 0) {
-      clearInterval(interval);
-  
-      alert("TIME EXPIRED");
-    }
-  }, 1000);
+function clearDisplay() {
+  daysDisplay.innerHTML = "0";
+  hoursDisplay.innerHTML = "0";
+  minutesDisplay.innerHTML = "0";
+  secondsDisplay.innerHTML = "0"; 
 }
