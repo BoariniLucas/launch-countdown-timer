@@ -19,6 +19,17 @@
     
     <h1>We're launching soon</h1>
 
+    <button class="btn-open-date-form" id="btn-open-date-form">
+      <svg fill="#8385A9" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 26.016q0 2.496 1.76 4.224t4.256 1.76h20q2.464 0 4.224-1.76t1.76-4.224v-20q0-1.952-1.12-3.488t-2.88-2.144v2.624q0
+         1.248-0.864 2.144t-2.144 0.864-2.112-0.864-0.864-2.144v-3.008h-12v3.008q0 1.248-0.896 2.144t-2.112 0.864-2.144-0.864-0.864-2.144v-2.624q-1.76 
+         0.64-2.88 2.144t-1.12 3.488v20zM4 26.016v-16h24v16q0 0.832-0.576 1.408t-1.408 0.576h-20q-0.832 0-1.44-0.576t-0.576-1.408zM6.016 3.008q0 0.416 
+         0.288 0.704t0.704 0.288 0.704-0.288 0.288-0.704v-3.008h-1.984v3.008zM8 24h4v-4h-4v4zM8 18.016h4v-4h-4v4zM14.016 24h4v-4h-4v4zM14.016 
+         18.016h4v-4h-4v4zM20 24h4v-4h-4v4zM20 18.016h4v-4h-4v4zM24 3.008q0 0.416 0.288 0.704t0.704 0.288 0.704-0.288 0.32-0.704v-3.008h-2.016v3.008z">
+        </path>
+      </svg>
+    </button>
+
     <section class="conatiner">
       <div class="time-box">
         <div id="box-days" class="time-box-countdown">
@@ -61,13 +72,42 @@
       </div>           
     </section>
 
+    
+
     <section id="launch-date" class="launch-date">
       <div class="select-date">
-        <input type="datetime-local" id="date-time" value="2018-06-12T19:30"
-         min="2018-06-07T00:00" max="2030-06-14T00:00">
+
+        <button class="btn-close" id="btn-close">
+          <svg fill="#8385A9" width="30px" height="30px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.004 23.087l7.08-7.081-7.07-7.071L8.929 7.02l7.067 7.069L23.084 7l1.912 1.913-7.089
+             7.093 7.075 7.077-1.912 1.913-7.074-7.073L8.917 25z"/>
+          </svg>
+        </button>
+
+        <h4>select a date and time</h4>
+
+        <input type="datetime-local" id="date-time" min="2018-06-07T00:00" max="2030-06-14T00:00">
+
+
+        <div>     
+          <button class="btn-clear-form" id="btn-clear-form">
+            <svg fill="#8385A9" width="30px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 6h-3.155a.949.949 0 0 0-.064-.125l-1.7-2.124A1.989 1.989 0 0 0 13.519 3h-3.038a1.987
+              1.987 0 0 0-1.562.75l-1.7 2.125A.949.949 0 0 0 7.155 6H4a1 1 0 0 0 0 2h1v11a2 2 0 0 0 1.994
+                2h10.011A2 2 0 0 0 19 19V8h1a1 1 0 0 0 0-2zm-9.519-1h3.038l.8 1H9.681zm6.524 14H7V8h10z"/>
+                <path d="M14 18a1 1 0 0 1-1-1v-7a1 1 0 0 1 2 0v7a1 1 0 0 1-1 1zM10 18a1 1 0 0 1-1-1v-7a1
+                1 0 0 1 2 0v7a1 1 0 0 1-1 1z"/>
+            </svg>
+          </button>
+
+          <button class="btn-select-date" id="btn-select-date">
+            <svg fill="#8385A9" width="30px" height="30px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 16.577l2.194-2.195 5.486 5.484L24.804 7.743 27 9.937l-14.32 14.32z"/>
+            </svg>
+          </button>                    
+        </div>
 
       </div>
-
     </section>
 
     <footer>

@@ -63,7 +63,32 @@ h3 {
     font-size: 70px;
     font-weight: bold;
     color: var(--fontColorCountdown);
-    
+}
+
+h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 1em 0;
+    color: var(--whiteColor);
+}
+
+button {
+    height: 30px;
+    width: 30px;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+.btn-open-date-form {
+    align-self: flex-end;
+    margin-right: 5em;
+}
+
+.btn-open-date-form svg:hover {
+    fill: var(--fontColorCountdown);
+    cursor: pointer;
 }
 
 .conatiner {
@@ -137,7 +162,7 @@ h3 {
 }
 
 .launch-date {
-    /*visibility: hidden;*/
+    visibility: hidden;
     display: flex;
     position: absolute;
     justify-content: center;
@@ -148,20 +173,81 @@ h3 {
 }
 
 .select-date {
-    height: 15em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 14em;
     width: 25em;
     border-radius: 5px;
+    padding: 1em;
+    box-sizing: border-box;
     background-color: var(--countdownColor1);
 }
 
+.select-date input {
+    font-family: var(--principalFont);
+    height: 2.5em;
+    width: 15em;
+    border-radius: 5px;
+    border: solid 1px var(--socialMidiaIconColor);
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: var(--socialMidiaIconColor);
+}
+
+.select-date input:hover {
+    color: var(--fontColorCountdown);
+    border: solid 1px var(--fontColorCountdown);
+    cursor: pointer;
+}
+
+.select-date div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    width: 10em;
+}
+
+.select-date div button {
+    margin: 0 2em;
+}
+
+.btn-close {
+    align-self: flex-end;
+}
+
+.btn-close svg:hover {
+    fill: var(--fontColorCountdown);
+    cursor: pointer;
+}
+
+.btn-select-date svg:hover {
+    fill: var(--fontColorCountdown);
+    cursor: pointer;
+}
+
+.btn-clear-form svg:hover{
+    fill: var(--fontColorCountdown);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
 .social-midia {
     display: flex;
-
 }
 
 .attribution {
     align-items: end;
-    
 }
 
 .attribution a {
