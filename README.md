@@ -25,9 +25,14 @@ Nesse projeto fiz realizando as seguinte etapas:
 - [X] Acertar links do footer;
 - [x] Implementar função para contagem regressiva; 
 - [X] Realizar estilização de flip no painel;
-- [ ] Implementar tela para escolher data;
+- [X] Implementar tela para escolher data;
+- [ ] Responsividade para mobile;
 
 ### Screenshot
+
+Abaixo estou deixando um screenshot do design final do projeto conforme desenvolvi:
+
+![Imagem do meu resultado do projeto](./design/my-solution.jpg)
 
 ### Construido com
 
@@ -40,5 +45,5 @@ As tecnologias utilizadas para esse projeto são as listadas abaixo:
 
 ### Contatos
 
-[LinkedIn](www.linkedin.com/in/lucas-boarini)
+[LinkedIn](https://www.linkedin.com/in/lucas-boarini)
 

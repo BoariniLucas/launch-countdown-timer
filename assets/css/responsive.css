@@ -1,0 +1,72 @@
+@media screen and (max-width: 375px) {
+    body {
+        justify-content: end;
+        width: 100%;
+    }
+
+    footer {
+        align-self: flex-end;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+    h2 {
+        font-size: 12px;
+    }
+    
+    h3 {
+        font-size: 40px;;
+    }
+
+    .btn-open-date-form {
+        align-self: flex-end;
+        margin-right: 1em;
+    }
+    
+    .conatiner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10em;
+        width: 100%;
+        margin: 2em 0 4em;
+    }
+
+    .time-box {
+        height: 12em;
+        width: 5.5em;
+        margin: 0.5em 0.5em;
+    }
+
+    .time-box-countdown {
+        height: 6em;
+        width: 5.5em;
+    }
+    
+    .time-box-countdown div {
+        height: 3em;
+        width: 5.5em;
+        border-radius: 5px;
+        margin-top: -2.9em;
+        background-color: var(--countdownColor1);
+        opacity: 0.7;
+    }
+    
+    .time-box-countdown div::after {
+        height: 15px;
+        width: 6px;
+        margin-top: 2.4em;
+    }
+    
+    .time-box-countdown div::before {
+        height: 15px;
+        width: 8px;
+        margin-left: 5em;
+        margin-top: 2.4em;
+    }
+}
