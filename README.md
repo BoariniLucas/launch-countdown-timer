@@ -39,7 +39,7 @@ Abaixo estou deixando um screenshot do design final do projeto conforme desenvol
 
 No link abaixo você será direcionado para o deploy dessa aplicação em funcionamento:
 
-- [Countdown]()
+- [Countdown](https://launch-countdown-timer-rouge.vercel.app/)
 
 ### Construido com
 
